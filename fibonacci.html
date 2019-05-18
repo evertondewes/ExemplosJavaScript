@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <script>
+        function  fibonacci(n) {
+            if(n == 0 || n == 1) {
+                return n;
+            } else {
+                if(n > 1 ){
+                    return fibonacci( n - 1 ) + fibonacci(n - 2);
+                } else {
+                    alert('Seu burrico! tem que ser positivo');
+                    return 0;
+                }
+            }
+        }
+        function calcular(){
+            var n = parseInt(document.getElementById('valor').value);
+            var resultado = fibonacci(n);
+            document.getElementById('resultado').innerText = resultado;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return false;">
+        número:<input type="number" id="valor">
+        <button onclick="calcular();">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>

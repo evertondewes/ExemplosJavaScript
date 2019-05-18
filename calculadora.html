@@ -40,6 +40,9 @@
                 var op2 = parseInt(document.getElementById('op2').value);
                 resultado.innerText = mul(op1, op2);
                 break;
+            default:
+                alert('opção não disponível');
+                break;
         }
 
         return false;
@@ -50,7 +53,7 @@
     <form>
         Operador 1:<input id="op1" type="number" /><br>
         Operador 2:<input id="op2" type="number" /><br>
-        <button onclick="return operacao('soma');">+</button>
+        <button onclick="return operacao('soma12');">+</button>
         <button onclick="return operacao('sub');">-</button>
         <button onclick="return operacao('div');">/</button>
         <button onclick="return operacao('mul');">*</button>
