@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+<script>
+    function soma(op1, op2){
+        return op1 + op2;
+    }
+     function sub(op1, op2){
+        return op1 - op2;
+    }
+     function div(op1, op2){
+        return op1 / op2;
+    }
+     function mul(op1, op2){
+        return op1 * op2;
+    }
+
+    function operacao(tipo){
+        switch (tipo) {
+            case 'soma' :
+                var resultado = document.getElementById('resultado');
+                var op1 = parseInt(document.getElementById('op1').value);
+                var op2 = parseInt(document.getElementById('op2').value);
+                resultado.innerText = soma(op1, op2);
+                break;
+             case 'sub' :
+                var resultado = document.getElementById('resultado');
+                var op1 = parseInt(document.getElementById('op1').value);
+                var op2 = parseInt(document.getElementById('op2').value);
+                resultado.innerText = sub(op1, op2);
+                break;
+             case 'div' :
+                var resultado = document.getElementById('resultado');
+                var op1 = parseInt(document.getElementById('op1').value);
+                var op2 = parseInt(document.getElementById('op2').value);
+                resultado.innerText = div(op1, op2);
+                break;
+             case 'mul' :
+                var resultado = document.getElementById('resultado');
+                var op1 = parseInt(document.getElementById('op1').value);
+                var op2 = parseInt(document.getElementById('op2').value);
+                resultado.innerText = mul(op1, op2);
+                break;
+        }
+
+        return false;
+    }
+</script>
+</head>
+<body>
+    <form>
+        Operador 1:<input id="op1" type="number" /><br>
+        Operador 2:<input id="op2" type="number" /><br>
+        <button onclick="return operacao('soma');">+</button>
+        <button onclick="return operacao('sub');">-</button>
+        <button onclick="return operacao('div');">/</button>
+        <button onclick="return operacao('mul');">*</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>

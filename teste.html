@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+        <script>
+            function alteraConteudo(elemento) {
+                elemento.innerText = 'Novo Texto';
+            }
+        </script>
+
+    </head>
+
+    <body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <title>Teste Tabelas</title>
+    </head>
+    <body>
+    <table>
+        <caption>Minha Tabela</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: yellow">
+            <col style="background-color: red">
+            <col style="background-color: blue">
+        </colgroup>
+        <tr>
+            <th>ID</th>
+            <th>Empresa</th>
+            <th>Contato</th>
+            <th>Telefone</th>
+        </tr>
+        <tr>
+            <th onmouseover="document.getElementById('nome').style.backgroundColor='black';">1</th>
+            <td onmouseover="document.getElementById('nome').style.backgroundColor='red';">IBM</td>
+            <td id="nome">Albert</td>
+            <td>123123</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Dell</td>
+            <td>Newton</td>
+            <td>123456</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>HP</td>
+            <td>Benjamin</td>
+            <td>123432</td>
+        </tr>
+    </table>
+    </body>
+    </html>
+
+
+    </body>
+
+</html>

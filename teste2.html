@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script>
+        var i =0;
+
+        function trocarCor(indice, objeto) {
+            if(indice%2==0){
+                objeto.style.backgroundColor='blue';
+            } else {
+                objeto.style.backgroundColor='red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <button onmouseover="
+        var objeto = document.getElementById('meuConteudo');
+
+        trocarCor(i, objeto);
+
+        i++;
+
+        objeto.innerHTML = objeto.innerHTML + '<br><button onclick=\' trocarCor((i-1), this); \'>' + i + '</button>';
+
+
+        ">Teste</button>
+    </form>
+    <br>
+    <pre id="meuConteudo">Teste de conteúdo</pre>
+</body>
+</html>
